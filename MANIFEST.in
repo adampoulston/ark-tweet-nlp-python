@@ -1,0 +1,2 @@
+include README.md
+include ark_tweet_nlp/*.jar
