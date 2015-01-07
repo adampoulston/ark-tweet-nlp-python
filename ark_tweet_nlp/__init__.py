@@ -39,7 +39,7 @@ def _call_runtagger(tweets, run_tagger_cmd=RUN_TAGGER_CMD):
 
     # remove carriage returns as they are tweet separators for the stdin
     # interface
-    tweets_cleaned = [tw.replace('\n', ' ') for tw in tweets]
+    tweets_cleaned = [tw.replace('\n', ' ').replace('\r', '') for tw in tweets]
     message = "\n".join(tweets_cleaned)
 
     # force UTF-8 encoding (from internal unicode type) to avoid .communicate encoding error as per:
